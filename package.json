@@ -1,5 +1,5 @@
 {
-  "name": "uttori-wiki-demo",
+  "name": "uttori-wiki-demo-site",
   "version": "1.0.0",
   "description": "An example Uttori Wiki.",
   "author": "Matthew Callis <matthew.callis@gmail.com>",
@@ -7,19 +7,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uttori/uttori-wiki-demo.git"
+    "url": "git+https://github.com/uttori/uttori-wiki-demo-site.git"
   },
   "bugs": {
-    "url": "https://github.com/uttori/uttori-wiki-demo/issues"
+    "url": "https://github.com/uttori/uttori-wiki-demo-site/issues"
   },
-  "homepage": "https://github.com/uttori/uttori-wiki-demo",
+  "homepage": "https://github.com/uttori/uttori-wiki-demo-site",
   "keywords": [
     "uttori",
+    "uttori-wiki",
     "wiki",
     "demo"
   ],
   "engines": {
-    "node": ">= 12"
+    "node": ">= 14"
   },
   "dependencies": {
     "@uttori/plugin-analytics-json-file": "v2.0.3",
@@ -33,16 +34,13 @@
     "@uttori/plugin-vm-related-documents": "v2.1.4",
     "@uttori/search-provider-lunr": "v3.3.4",
     "@uttori/storage-provider-json-file": "v4.0.0",
-    "@uttori/wiki": "file:../uttori-wiki",
+    "@uttori/wiki": "v4.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "highlight.js": "^10.5.0",
-    "iltorb": "^2.4.5",
-    "node-zopfli-es": "^1.0.7",
     "serve-favicon": "^2.5.0",
-    "shrink-ray-current": "^4.1.2",
     "slugify": "^1.4.6"
   },
   "devDependencies": {
