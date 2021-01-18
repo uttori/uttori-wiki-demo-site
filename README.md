@@ -3,6 +3,9 @@
 To get started, clone, install dependencies (Node v14) and run `npm start`:
 
 ```sh
+cp example.env .env
+# Edit the config to start hacking
+code .
 npm install
 npm start
 ```
