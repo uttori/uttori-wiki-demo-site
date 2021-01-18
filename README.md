@@ -1,5 +1,12 @@
 # About the Uttori Wiki Demo
 
+To get started, clone, install dependencies (Node v14) and run `npm start`:
+
+```sh
+npm install
+npm start
+```
+
 This is a hackable demo of the [Uttori Wiki](https://github.com/uttori/uttori-wiki) library and several plugins. The `edit_key` and `delete_key` are both set in the `.env` file. These are required to make, edit or delete documents and should be appended to the URL, for example to edit this page [click here](http://127.0.0.1:8000/wiki/home-page/edit/test). You can also make a [new document](http://127.0.0.1:8000/wiki/new/test) but will need the key in the URL, so the button in the top right should `404`. Try creating new documents with the site section tags `examples`, `reference`, or `tutorial` and watch as the site section counts increase.
 
 ## Rendering
