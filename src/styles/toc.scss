@@ -1,0 +1,48 @@
+.table-of-contents {
+  background-color: #f8f8f8;
+  border: 1px solid #f1f1f1;
+  border-radius: 3px;
+  font-size: .8em;
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 12px 12px 12px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 4px 0;
+    }
+  }
+
+  // Support starting nesting from any level
+  & > ul.table-of-contents-h1 > ul.table-of-contents-h2,
+  & > ul.table-of-contents-h2 > ul.table-of-contents-h3,
+  & > ul.table-of-contents-h3 > ul.table-of-contents-h4,
+  & > ul.table-of-contents-h4 > ul.table-of-contents-h5 {
+    padding-left: 8px;
+  }
+  & > ul.table-of-contents-h1 > ul.table-of-contents-h2 > ul.table-of-contents-h3,
+  & > ul.table-of-contents-h2 > ul.table-of-contents-h3 > ul.table-of-contents-h4,
+  & > ul.table-of-contents-h3 > ul.table-of-contents-h4 > ul.table-of-contents-h5 {
+    padding-left: 16px;
+  }
+  & > ul.table-of-contents-h1 > ul.table-of-contents-h2 > ul.table-of-contents-h3 > ul.table-of-contents-h4,
+  & > ul.table-of-contents-h2 > ul.table-of-contents-h3 > ul.table-of-contents-h4 > ul.table-of-contents-h5 {
+    padding-left: 24px;
+  }
+  & > ul.table-of-contents-h1 > ul.table-of-contents-h2 > ul.table-of-contents-h3 > ul.table-of-contents-h4 > ul.table-of-contents-h5 {
+    padding-left: 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .table-of-contents {
+    float: right;
+    margin: 0 0 1em 1.3em;
+    max-width: 30%;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title><%= title ? title + " | " : "" %><%= config.site_title %></title>
+<link rel="stylesheet" href="<%= basePath %>/styles/style.css" media="all" />
+<link rel="apple-touch-icon" href="<%= basePath %>/apple-touch-icon.png" />
+<%- include('open_graph.html'); -%>
+<script>
+window.basePath = '<%= basePath %>';
+</script>
+</head>
+<body>
+<header class="navbar" role="banner">
+  <div class="background">
+    <div class="container">
+      <div class="navbar-header">
+        <h2 class="navbar-brand">
+          <a href="<%= basePath %>/" title="<%= config.site_title %>"><%= config.site_header %></a>
+        </h2>
+        <form role="search" method="get" name="search" class="navbar-form" action="<%= basePath %>/search">
+          <input type="text" aria-label="Search" value="" name="s" class="form-control search-query" placeholder="🔍 Search <%= config.site_title %>">
+        </form>
+        <div class="navbar-button">
+          <a href="<%= basePath %>/tags" class="button tags" title="Browse Document Tags">Browse Tags</a>
+        </div>
+        <div class="navbar-button">
+          <a href="<%= basePath %>/new" class="button new-document" title="Create New Document">New Document</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<%- body %>
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      ©<%= new Date().getFullYear() %> <%= config.site_footer %> | <a href="https://github.com/uttori/wiki" rel="external">Powered by Uttori Wiki</a>
+    </div>
+  </div>
+</footer>
+<%- script %>
+<% if(config.google_analytics_id){ %>
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '<%= config.google_analytics_id %>', 'auto');
+ga('send', 'pageview');
+</script>
+<% } %>
+</body>
+</html>

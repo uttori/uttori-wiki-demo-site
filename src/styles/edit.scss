@@ -1,0 +1,47 @@
+.before-main-wrapper {
+  .header-wrapper {
+    overflow: hidden;
+    padding: 1em 0;
+    position: relative;
+
+    .container {
+      position: relative;
+    }
+    .header-titles {
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        align-self: center;
+        font-size: 32px;
+        font-style: normal;
+        line-height: 1.5em;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.main-section {
+  &.edit {
+    > .content {
+      width: 100%;
+
+      .dropzone {
+        border-radius: 4px;
+      }
+      textarea {
+        overflow: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-titles {
+    h1 {
+      font-size: 48px;
+    }
+  }
+}
