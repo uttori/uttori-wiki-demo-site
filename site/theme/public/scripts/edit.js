@@ -67,12 +67,15 @@ var slugify = createCommonjsModule(function (module, exports) {
 });
 
 /* eslint-disable node/no-unsupported-features/es-syntax, no-alert */
+const parts = window.location.pathname.split('/');
+const key = parts[parts.length - 1]; // Update Title / Slug
 
 const updateFormAction = event => {
   const slug = slugify(event.target.value, {
     replacement: '-',
     lower: true
   });
+  const form = document.querySelector('.edit form');
 
   if (form) {
     form.action = `${window.basePath}/${slug}/save/${key}`;
@@ -89,14 +92,12 @@ const textarea = document.querySelector('textarea.content');
 
 const textareaStretch = () => {
   textarea.style.cssText = 'height: auto;';
-  textarea.style.cssText = 'height:' + textarea.scrollHeight + 'px';
+  textarea.style.cssText = `height:${textarea.scrollHeight}px`;
 }; // Wait for Ready
 
 
 document.addEventListener('DOMContentLoaded', () => {
   // Grab the edit_key from the URL. It may be garbage, but if key checking is not enabled it does not matter.
-  const parts = window.location.pathname.split('/');
-  const key = parts[parts.length - 1];
   const form = document.querySelector('.edit form');
 
   if (form && key !== 'edit') {
